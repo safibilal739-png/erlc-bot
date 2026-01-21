@@ -11,7 +11,7 @@ const functions = fs.readdirSync("./src/functions").filter(file => file.endsWith
 const eventFiles = fs.readdirSync("./src/events").filter(file => file.endsWith(".js"));
 const commandFolders = fs.readdirSync("./src/commands");
 
-const webhookClient = new WebhookClient({ id: 'ENTER WEBHOOK ID', token: 'ENTER WEBHOOK TOKEN' });
+const webhookClient = new WebhookClient({ 'id:1463574915239121123' token: 'iBiylUY1m0O0yPrmHqcDLBzvbbKRvCV4fMWuJYmZDcqqU0WNwwGvrcy_HCDjseoWcAyR' });
 
 function editS () {
     fetch (`https://api.policeroleplay.community/v1/server`, {
@@ -47,7 +47,7 @@ function editS () {
         )
 	.setColor(embedcol);
     
- webhookClient.editMessage('ENTER MESSAGE ID', {
+ webhookClient.editMessage('1463575999743791205', {
     //content: response.CurrentPlayers.toString() + ' out of ' + response.MaxPlayers.toString() + ' max players',
     embeds: [embed],
  
@@ -69,4 +69,5 @@ setInterval(editS, 120000);
     client.handleCommands(commandFolders, "./src/commands");
     client.login(process.env.token)
 })();
+
 
